@@ -10,7 +10,7 @@ function UserList() {
   useEffect(() => {
     async function getData() {
       try {
-        const response = await axios.get("http://localhost:3005/assigning");
+        const response = await axios.get("https://assigning-mentor-3fh3.onrender.com/assigning");
         console.log(response.data);
         setDetail(response.data);
       } catch (error) {

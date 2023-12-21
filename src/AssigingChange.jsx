@@ -11,7 +11,7 @@ function AssigingChange() {
 
   let getdata = async () => {
     try {
-      const response = await axios.get(`http://localhost:3005/assigning/${params.id}`);
+      const response = await axios.get(`https://assigning-mentor-3fh3.onrender.com/assigning/${params.id}`);
       const detailData = response.data;
       // console.log(detailData);
   
@@ -62,7 +62,7 @@ function AssigingChange() {
 
       try {
      
-        await axios.post(`http://localhost:3005/change_mentor`)
+        await axios.post(`https://assigning-mentor-3fh3.onrender.com/change_mentor`)
         formik.handleReset()
         // console.log(authorData)
         alert("Data posted Successfully")

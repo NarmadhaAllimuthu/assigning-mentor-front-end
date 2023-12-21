@@ -36,7 +36,7 @@ function Assigning() {
         onSubmit: async (values) => {
     
           try {
-            const authorData = await axios.post("http://localhost:3005/assigning", values)
+            const authorData = await axios.post("https://assigning-mentor-3fh3.onrender.com/assigning", values)
             // dispatch(addAuthorList(authorData.data))
             formik.handleReset()
             // console.log(authorData.data)

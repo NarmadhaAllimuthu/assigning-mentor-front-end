@@ -8,7 +8,7 @@ function PreviousMentor() {
 
   const handleShowStudents = async () => {
     try {
-      const response = await axios.get(`http://localhost:3005/previous_mentor/${studentName}`);
+      const response = await axios.get(`https://assigning-mentor-3fh3.onrender.com/previous_mentor/${studentName}`);
       const data = response.data;
 
       if (data && Object.keys(data).length > 0) {

@@ -10,7 +10,7 @@ const [assignedStudent,setAssignedStudent] = useState([]);
 const handleShowStudents = async()=>{
     try{
       
-        const response = await axios.get(`http://localhost:3005/assigning/mentorname/${mentorName}`);
+        const response = await axios.get(`https://assigning-mentor-3fh3.onrender.com/assigning/mentorname/${mentorName}`);
 // console.log(data)
 const data = response.data;
 if(data  && data.length > 0){
