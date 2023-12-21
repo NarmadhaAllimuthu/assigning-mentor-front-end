@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Mentor from './Mentor';
+import Student from './Student';
+import HomePage from './HomePage';
+import Assigning from './Assigning';
+import UserList from './UserList';
+import AssigingChange from './AssigingChange';
+import MentorStudentList from './MentorStudentList';
+import PreviousMentor from './PreviousMentor';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+
+<Routes>
+  <Route path='/' element={<HomePage></HomePage>}></Route>
+  <Route path="/mentor" element={<Mentor/>}></Route>
+  <Route path ="/student" element={<Student/>}></Route>
+<Route path='/assigning' element={<Assigning/>}></Route>
+<Route path='/userlist' element={<UserList/>}></Route>
+<Route path='/assigning_change/:id' element={<AssigingChange/>}></Route>
+<Route path='/mentor_student_list' element={<MentorStudentList/>}></Route>
+<Route path='/previous_mentor' element={<PreviousMentor/>}></Route>
+</Routes>
+
+    </BrowserRouter>
   );
 }
 
